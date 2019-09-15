@@ -32,12 +32,12 @@ $(function(){
     if ( value > 100 )
     {
       _header.addClass(animationClass);
-      //$('header .logo').hide(1000);
+      $('header .logo').hide(1000);
 
     }else
     {
       _header.removeClass(animationClass);
-      //$('header .logo').show(1000);
+      $('header .logo').show(1000);
     }
   });
 });
