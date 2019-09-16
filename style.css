@@ -14,21 +14,23 @@ body
 header
 {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   top: 0;
   left: 0;
   z-index: 24;
   width: 100%;
-  height : 260px;
-  transition: 0.5s;
-  background-color: #ffffff;
+  height: auto;
+  background-color: rgb(255, 255, 255);
   border-bottom: solid 2.5px rgb(100, 115, 136);
 }
 header .logo
 {
   margin-top: 30pt;
+  margin-bottom: 20pt;
   text-align: center;
-  height: 150px;
-  vertical-align: middle;
+  transition: .5s;
 }
 header a
 {
@@ -57,12 +59,12 @@ header a:hover:after
 }
 header ul
 {
-  /*background-color: rgba(45, 48, 0, 0.92);*/
-  background: #ffffff;
   display: flex;
+  margin-top: 0px;
+  margin-bottom: 0;
   height: 55px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 header ul li
 {
@@ -80,16 +82,26 @@ header span#Logo
   color: rgb(52, 20, 0);
   font-size: 55px;
 }
-header.is-animation
+header.is-animation > .logo
 {
-  height: 70px;
+  height: 0;
+  margin: 0;
 }
+header.is-animation span#Shinshu
+{
+  display: none;
+}
+header.is-animation span#Logo
+{
+  display: none;
+}
+
 
 
 
 .blank_spase
 {
-  height: 260px;
+  height: 230px;
 }
 
 
@@ -122,13 +134,14 @@ header.is-animation
   position: absolute;
   display: flex;
   width: 300px;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column-reverse;
   writing-mode: vertical-rl;
-  right: 30px;
-  top: 70px;
-  font-size: 14px;
+  right: 40px;
+  top: 80px;
+  font-size: 15.5px;
 }
+.head_image > .message span{margin-right: 30px;}
 .head_image > .message span#msg1{}
 .head_image > .message span#msg2{}
 .head_image > .message span#msg3{}
@@ -160,6 +173,8 @@ h2
 {
   margin-top: 200px;
   text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .grid_menu
 {
@@ -176,6 +191,14 @@ h2
 {
   margin-top: 200px;
   text-align: center;
+}
+.course .dulation
+{
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .area

@@ -1,10 +1,10 @@
 $(function()
 {
-  //$('.head_image > .message span#msg1').hide().delay(2000).fadeIn(1000);
-  //$('.head_image > .message span#msg2').hide().delay(3000).fadeIn(1000);
-  //$('.head_image > .message span#msg3').hide().delay(4000).fadeIn(1000);
-  //$('.head_image > .message span#msg4').hide().delay(5000).fadeIn(1000);
-  //$('.head_image > .message span#msg5').hide().delay(6000).fadeIn(1000);
+  $('.head_image > .message span#msg1').hide().delay(0).fadeIn(1000);
+  $('.head_image > .message span#msg2').hide().delay(1500).fadeIn(1000);
+  $('.head_image > .message span#msg3').hide().delay(3000).fadeIn(1000);
+  $('.head_image > .message span#msg4').hide().delay(4500).fadeIn(1000);
+  $('.head_image > .message span#msg5').hide().delay(6000).fadeIn(1000);
 }
 );
 
@@ -25,19 +25,20 @@ $(function(){
 
 $(function(){
   var _window = $(window),
-      _header = $('header'),
+      _header = $('header');
       animationClass = 'is-animation';
+      bottom = $('.head_image').height();
   _window.on('scroll', function() {
     var value = _window.scrollTop();
-    if ( value > 100 )
+    if ( value > bottom )
     {
       _header.addClass(animationClass);
-      $('header .logo').hide();
+      //$('header .logo').hide();
 
     }else
     {
       _header.removeClass(animationClass);
-      $('header .logo').show(1000);
+      //$('header .logo').fadeIn(1000);
     }
   });
 });
