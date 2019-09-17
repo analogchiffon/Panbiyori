@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+
+#Debug
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  z-index: 25;
+  border-bottom: solid 1px;
+}
+
+
 body
 {
   display: flex;
@@ -30,7 +43,6 @@ header .logo
   margin-top: 30pt;
   margin-bottom: 20pt;
   text-align: center;
-  transition: .5s;
 }
 header a
 {
@@ -95,6 +107,20 @@ header.is-animation span#Logo
 {
   display: none;
 }
+header.is-animation-2
+{
+  position: absolute;
+  margin-top: 850px;
+}
+header.is-animation-3 .logo
+{
+  position: fixed;
+}
+header.is-animation-3 span
+{
+  display: none;
+}
+
 
 
 
@@ -119,16 +145,37 @@ header.is-animation span#Logo
 {
   width: 100%;
   height: auto;
-  filter: opacity(70%);
   -webkit-transform: scale(1);
   transform: scale(1.0);
-  transition: .5s ease-in-out;
+  opacity: 0;
+  animation-name: images_animation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
-.head_image figure:hover img
+.head_image figure img.img1
 {
-  -webkit-transform: scale(1.0);
-  transform: scale(1.0);
+  display: block;
 }
+.head_image figure img.img2
+{
+  position: absolute;
+  animation-delay: 5s;
+  top: 0;
+}
+.head_image figure img.img3
+{
+  position: absolute;
+  animation-delay: 10s;
+  top:0;
+}
+@keyframes images_animation
+{
+  0%{ opacity: 0;}
+  12.5%{ opacity: 0.6;}
+  37.5%{ opacity: 0.6;}
+  50%{ opacity: 0; }
+}
+
 .head_image > .message
 {
   position: absolute;

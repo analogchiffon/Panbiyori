@@ -23,22 +23,26 @@ $(function(){
 });
 
 
+
 $(function(){
   var _window = $(window),
       _header = $('header');
-      animationClass = 'is-animation';
+      animationClass = 'is-animation-2';
+      animationClass3 = 'is-animation-3';
       bottom = $('.head_image').height();
   _window.on('scroll', function() {
     var value = _window.scrollTop();
-    if ( value > bottom )
+    var logo = $('.logo');
+    var pos2 = logo.get(0).getBoundingClientRect();
+    $("#Debug span#b").text(pos2.bottom.toString());
+    $("#Debug span#a").text(value.toString());
+    if ( value > bottom)
     {
       _header.addClass(animationClass);
-      //$('header .logo').hide();
-
-    }else
+    }
+    else
     {
       _header.removeClass(animationClass);
-      //$('header .logo').fadeIn(1000);
     }
   });
 });
