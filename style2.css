@@ -1,0 +1,114 @@
+main
+{
+  max-width: 1300px;
+  background-color: white;
+  margin: auto;
+}
+
+h2
+{
+  font-size: 30px;
+  font-style: normal;
+}
+h2 > img
+{
+  margin: 0 0px;
+	width: 30px;
+}
+
+.about
+{
+  margin-top: 200px;
+  text-align: center;
+}
+
+.menu
+{
+  margin-top: 200px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.grid_menu
+{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit , minmax(400px , 1fr));
+}
+.item_menu
+{
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+}
+.item_menu img
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 80px;
+    transition: 1.0s;
+    transform: rotateX(0deg );
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.6));
+}
+.item_menu:hover img
+{
+    transform: rotateZ( 15deg ) scale(1.2);
+}
+.item_menu .disc
+{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    z-index: 0;
+}
+.item_menu .name
+{
+    text-align: center;
+    margin: auto;
+    border-bottom: dotted 2px rgb(75, 40, 0);
+    width: 70%;
+}
+
+.course
+{
+  margin-top: 200px;
+  text-align: center;
+}
+.course .dulation
+{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit , minmax(400px , 1fr));
+}
+.course .plan
+{
+    height: 300px;
+}
+
+.area
+{
+  margin-top: 200px;
+  text-align: center;
+}
+.ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+  }
+   
+  .ggmap iframe,
+  .ggmap object,
+  .ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+
+.Contact
+{
+  text-align: center;
+}
